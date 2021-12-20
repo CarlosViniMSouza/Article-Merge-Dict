@@ -181,3 +181,35 @@ print(merged_dict)
 ```
 
 ### Usar o operador ** para mesclar os dicionários não afeta nenhum dos dicionários.
+
+## Como mesclar dicionários em Python usando o `|` Operador:
+
+### A partir do Python 3.9, podemos usar o operador Union (`|`) para mesclar dois ou mais dicionários.
+
+```python
+dict_one = {
+    "id": 1,
+    "name": "Carlos Souza",
+}
+
+dict_two = {
+    "skills": ["Python", "DS&A", "Django", "D.S.", "Work with Software Development"],
+    "college": "IFAM",
+}
+
+dict_three = {
+    "city": "Manaus",
+    "country": "Brasil"
+}
+
+merged_dict = dict_one | dict_two | dict_three
+merged_dict
+
+# Output: {'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM', 'city': 'Manaus', 'country': 'Brasil'}
+```
+
+### Este é o método mais conveniente disponível para mesclar dicionários em Python.
+
+## Conclusão:
+
+### Exploramos vários métodos diferentes para mesclar dicionários. Se você tiver o Python 3.9 ou superior, deverá usar o `|` operador. Mas se você usar versões mais antigas do Python, ainda poderá usar os outros métodos discutidos acima.
