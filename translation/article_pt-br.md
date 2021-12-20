@@ -15,3 +15,42 @@ my_dict = {
     "skills": ["Python", "DS&A", "Django", "D.S.", "Work with Software Development"]
 }
 ```
+
+### Às vezes, precisamos mesclar dois ou mais dicionários para criar um dicionário maior. Por exemplo:
+
+```python
+dict_one = {
+    "id": 1,
+    "name": "Carlos Souza",
+    "skills": ["Python", "DS&A", "Django", "D.S.", "Work with Software Development"]
+}
+
+dict_two = {
+    "college": "IFAM",
+    "city": "Manaus",
+    "country": "Amazonas"
+}
+
+merged_dict = {
+    "id": 1,
+    "name": "Carlos Souza",
+    "skills": ["Python", "DS&A", "Django", "D.S.", "Work with Software Development"],
+    "college": "IFAM",
+    "city": "Manaus",
+    "country": "Amazonas"
+}
+```
+
+### Em `merged_dict`, temos os pares de valores-chave de `dict_one` e `dict_two`. Isso é o que desejamos alcançar programaticamente.
+
+### Existem várias maneiras de fazer isso em Python:
+
+1 - Usando um loop for
+
+2 - Usando o método `dict.update()`
+
+3 - Usando o operador `**`
+
+4 - Usando o `|` Operador (União) (para Python 3.9 e superior)
+
+### Vamos explorar cada caminho um após o outro.
