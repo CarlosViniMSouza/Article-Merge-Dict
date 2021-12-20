@@ -28,7 +28,7 @@ dict_one = {
 dict_two = {
     "college": "IFAM",
     "city": "Manaus",
-    "country": "Amazonas"
+    "country": "Brasil"
 }
 
 merged_dict = {
@@ -37,7 +37,7 @@ merged_dict = {
     "skills": ["Python", "DS&A", "Django", "D.S.", "Work with Software Development"],
     "college": "IFAM",
     "city": "Manaus",
-    "country": "Amazonas"
+    "country": "Brasil"
 }
 ```
 
@@ -72,7 +72,7 @@ dict_two = {
 
 dict_three = {
     "city": "Manaus",
-    "country": "Amazonas"
+    "country": "Brasil"
 }
 
 merged_dict = dict_one
@@ -87,10 +87,69 @@ print(merged_dict)
 """
 Output:
 
-{'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM', 'city': 'Manaus', 'country': 'Amazonas'}
+{'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM', 'city': 'Manaus', 'country': 'Brasil'}
 """
 ```
 
 ### Mas o problema com esse método é que precisamos executar muitos loops para mesclar os dicionários.
 
 ### Então, qual é a outra opção?
+
+## Como mesclar dicionários em Python usando o método `dict.update()`:
+
+### Se você explorar a classe `dict`, existem vários métodos dentro dela. Um desses métodos é o método `update()`, que você pode usar para mesclar um dicionário em outro.
+
+```python
+dict_one = {
+    "id": 1,
+    "name": "Carlos Souza",
+    "skills": ["Python", "DS&A", "Django", "D.S.", "Work with Software Development"],
+}
+
+dict_two = {
+    "college": "IFAM",
+    "city": "Manaus",
+    "country": "Brasil"
+}
+
+dict_one.update(dict_two)
+
+print(dict_one)
+
+"""
+Output:
+
+{'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM', 'city': 'Manaus', 'country': 'Brasil'}
+"""
+```
+
+### Mas o problema quando usamos o método `update()` é que ele modifica um dos dicionários. Se quisermos criar um terceiro dicionário sem modificar nenhum dos outros dicionários, não podemos usar este método.
+
+### Além disso, você só pode usar esse método para mesclar dois dicionários por vez. Se você deseja mesclar três dicionários, primeiro você precisa mesclar os dois primeiros e, em seguida, mesclar o terceiro com o dicionário modificado.
+
+```python
+dict_one = {
+    "id": 1,
+    "name": "Ashutosh",
+}
+
+dict_two = {
+    "books": ["Python", "DSA"],
+    "college": "NSEC",
+}
+
+dict_three = {
+    "city": "Kolkata",
+    "country": "India"
+}
+
+dict_one.update(dict_two)
+print(dict_one)
+# Output: {'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM'}
+
+dict_one.update(dict_three)
+print(dict_one)
+# Output: {'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM', 'city': 'Manaus', 'country': 'Brasil'}
+```
+
+### Vamos explorar algumas outras opções.
