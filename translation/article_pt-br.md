@@ -54,3 +54,43 @@ merged_dict = {
 4 - Usando o `|` Operador (União) (para Python 3.9 e superior)
 
 ### Vamos explorar cada caminho um após o outro.
+
+## Como mesclar dicionários em Python usando um loop for:
+
+### Podemos mesclar dois ou mais dicionários usando o loop for como este:
+
+```python
+dict_one = {
+    "id": 1,
+    "name": "Carlos Souza",
+}
+
+dict_two = {
+    "skills": ["Python", "DS&A", "Django", "D.S.", "Work with Software Development"],
+    "college": "IFAM",
+}
+
+dict_three = {
+    "city": "Manaus",
+    "country": "Amazonas"
+}
+
+merged_dict = dict_one
+
+for key, value in dict_two.items():
+    merged_dict[key] = value
+
+for key, value in dict_three.items():
+    merged_dict[key] = value
+
+print(merged_dict)
+"""
+Output:
+
+{'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM', 'city': 'Manaus', 'country': 'Amazonas'}
+"""
+```
+
+### Mas o problema com esse método é que precisamos executar muitos loops para mesclar os dicionários.
+
+### Então, qual é a outra opção?
