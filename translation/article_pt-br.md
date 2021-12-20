@@ -179,3 +179,5 @@ print(merged_dict)
 
 # Output: {'id': 1, 'name': 'Carlos Souza', 'skills': ['Python', 'DS&A', 'Django', 'D.S.', 'Work with Software Development'], 'college': 'IFAM', 'city': 'Manaus', 'country': 'Brasil'}
 ```
+
+### Usar o operador ** para mesclar os dicionários não afeta nenhum dos dicionários.
